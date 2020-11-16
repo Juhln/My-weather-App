@@ -106,3 +106,13 @@ li {
 .wind {
   color: #343434;
 }
+
+#footer-menu {
+display: block;
+margin-top: 1px;
+padding: 1px;
+    color: #343434;
+    font-size: 15px;
+}
+
+}

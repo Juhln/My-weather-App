@@ -111,3 +111,12 @@ ul {
 .source-code {
   color: #0c38d6;
 }
+
+.weather-temperature .active {
+  color: #343434;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}

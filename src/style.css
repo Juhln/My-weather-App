@@ -34,6 +34,7 @@ h3 {
   font-weight: 100;
   margin: 0px auto;
   margin-top: 15px;
+  text-transform: capitalize;
 }
 
 h4 {
@@ -70,6 +71,7 @@ ul {
   position: relative;
   font-size: 15px;
   color: #adafb5;
+  top: -23px;
 }
 
 .container-info-weather {

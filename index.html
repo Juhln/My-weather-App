@@ -1,88 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://kit.fontawesome.com/c643a26b7b.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c643a26b7b.js"
+      crossorigin="anonymous"
+    ></script>
     <link uic-remove rel="stylesheet" type="text/css" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather app</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div id="weather" class="weather-container">
-            <form class="search-form" id="search-form">
-                <div class="row">
-                    <div class="col-6">
-                        <input type="search" placeholder="Enter a city..." autocomplete="off" autofocus="on"
-                            id="city-input" class="form-control shadow-sm w-100" />
-                    </div>
-                    <input type="submit" class=" btn btn-primary" value="Search" />
-                    <div class="col-3">
-                        <button class="btn btn-success w-100" id="current-location-button">
-                            Current
-                        </button>
-                    </div>
-                </div>
-            </form>
-            
-            <br />
-
-            <h1 id="city"> Valencia,
-            </h1>
-            <h2 class=dayinweek>Today</h2>
-            <h3 id="date"> Sat, 15:02 </h3>
+      <div id="weather" class="weather-container">
+        <form class="search-form" id="search-form">
+          <div class="row">
             <div class="col-6">
-                <h2 id="city"></h2>
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                autocomplete="off"
+                autofocus="on"
+                id="city-input"
+                class="form-control shadow-sm w-100"
+              />
             </div>
-            <br />
-            <div class="wrapper">
-                <div class="row">
-                    <div class="col-9">
-                        <div class="float-right">
-                            <h4>
-                                <span class="temperature" id="temperature"></span>
-                                <span class="units">
-                                    <a href="#" id="celsius-link">°C</a> |
-                                    <a href="#" id="fahrenheit-link">°F</a>
-                                </span>
-                            </h4>
-                        </div>
+            <input type="submit" class="btn btn-primary" value="Search" />
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
 
-                        <div class="col-6">
-                            <div class="float-left">
-                                <img class="sun" src="images/sun1.png" alt="sun" width="150px" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <br />
 
-                <br /><br />
-                <div class="container-info-weather">
-                    <div class="row">
-                        <div class="col-4">
-                            <i class="fas fa-tint"></i>
-                            <span id="humidity"></span><span class=unit-humidity>%</span>
-                        </div>
-                        <div class="col-4">
-                            <i class="fas fa-wind"></i>
-                            <span id="wind"></span> <span class=unit-wind-speed>km/h</span>
-                        </div>
-                    </div>
-                </div>
-</div>
-</div>
-<div id="footer-menu">
-<footer>
-    <a href= "https://github.com/Juhln/My-weather-app" target="_blank">
-  Open-source code</a> <span>by Justine Herlin</span></footer>
-</div>
+        <h1 id="city">Valencia,</h1>
+        <h2 id="date">Sat, 15:02</h2>
+        <h3 id="description">Today</h3>
+        <h4>
+          <span class="temperature" id="temperature"></span>
+          <span class="units">
+            <a href="#" id="celsius-link">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a>
+          </span>
+        </h4>
+        <ul>
+          <li>
+            <i class="fas fa-tint"></i>
+            <span id="humidity"></span><span class="unit-humidity">%</span>
+          </li>
+          <li>
+            <i class="fas fa-wind"></i>
+            <span id="wind"></span> <span class="unit-wind-speed">km/h</span>
+          </li>
+        </ul>
 
-                <script src="src/index.js"></script>
+        <img class="sun" src="images/sun1.png" alt="sun" width="500px" />
+        <div class="col-2"></div>
+      </div>
+    
+    <div id="footer-menu">
+      <footer>
+        <a
+          href="https://github.com/Juhln/My-weather-app"
+          target="_blank"
+          class="source-code"
+        >
+          Open-source code</a
+        >
+        <span>by Justine Herlin</span>
+      </footer>
+    </div>
 
-            </body>
+    <script src="src/index.js"></script>
+  </body>
 </html>

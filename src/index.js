@@ -38,14 +38,16 @@ function showTemperature(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
-    document.querySelector("icon").innerHTML =
+    let iconElement = document.querySelector ("icon");
+  
+    celsiusTemperature = response.data.main.temp;
+    
     iconElement.setAttribute
      ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
-
-  celsiusTemperature = response.data.main.temp;
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
 
 function formatHours (timestamp) {
  let date= new Date(timestamp);
@@ -68,7 +70,7 @@ let forecast = null;
 for (let index =0; index <3; index++) {
 forecast = response.data.list[index];
 forecastElement.innerHTML +=  `
-<div class="col-2">
+<div class="col-4">
   <h5>
   ${formatHours(forecast.dt * 1000)}
   </h5>
@@ -145,7 +147,6 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-let iconElement = document.querySelector ("icon");
 let celsiusTemperature = null;
 
 searchCity("Valencia");

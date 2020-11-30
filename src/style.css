@@ -120,3 +120,36 @@ ul {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+
+.weather-forecast-temperature {
+  text-align: center;
+  font-size: 13px;
+  line-height: 15px;
+  height: auto;
+  white-space: nowrap;
+}
+
+*,
+::after,
+::before {
+  box-sizing: content-box;
+}
+
+.weather-forecast {
+  margin-top: 15px;
+}
+
+.weather-forecast h5 {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 5px;
+  height: 15px;
+  line-height: 15px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
